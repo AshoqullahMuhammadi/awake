@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #EFF2F4;
+    overflow: hidden;
+}
+
+#logo-container {
+    position: relative;
+    text-align: center;
+
+    text-shadow: 1px 2px 3px #EFF2F4;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    animation: sizeAnimation 2s alternate infinite;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #451744, #1d7533);
+    opacity: 0.7;
+    z-index: -1;
+    animation: colorEffect 3s alternate infinite;
+}
+
+#text-container {
+    text-align: center;
+    color: #341d88;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+#text-container {
+    margin-top: 20%;
+    text-align: center;
+    font-size: 3vw;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+
+
+@keyframes sizeAnimation {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1.5);
+    }
+}
